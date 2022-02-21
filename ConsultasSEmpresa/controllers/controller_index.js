@@ -42,7 +42,7 @@ controlador.mostrarproddesc = (consulta, respuesta) => {
 };
 
 controlador.mostrarprodcomprados = (consulta, respuesta) => {
-var sql = "select pk_identificacion, Nombre, Nombre_Pdto, Cantidad from usuarios join compras on pk_identificacion=fk_usuario join productos on Pk_id_pdto=fk_producto order by Nombre ASC";
+var sql = "select pk_identificacion, Nombre, Nombre_Pdto, SUM(Cantidad) as Cantidad from usuarios join compras on pk_identificacion=fk_usuario join productos on Pk_id_pdto=fk_producto group by pk_identificacion, Nombre_Pdto ASC";
 conexion.query(sql, (err, rows, fields) => {
   if (!err) {
     respuesta.render("prodcomp", { prodcom: rows });
