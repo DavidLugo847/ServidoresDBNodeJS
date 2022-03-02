@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formulario de Registro de Usuarios</title>
+</head>
+
+<body>
+    <nav>
+        <div id="nav">
+            <a href="/">Inicio</a>
+            <a href="/formRegistro">Registrar Usuarios</a>
+            <a href="/listarUsuarios">Listado de Usuarios</a>
+        </div>
+    </nav>
+    <div class="mainlist">
+        <div class="cont2">
+            <div class="titulo">
+                <h2>Listado de Usuarios</h2>
+            </div>
+            <table class="personas">
+
+                <thead>
+                    <th>Indentificación</th>
+                    <th>Nombre</th>
+                    <th>Correo Electronico</th>
+                    <th>Direccion</th>
+                    <th>Teléfono</th>
+                    <th>Tipo de Usuario</th>
+                    <th>Administrar</th>
+
+                </thead>
+                <% for(let i=0; i <datosUser.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%=datosUser[i].identificacion %>
+                        </td>
+                        <td>
+                            <%=datosUser[i].Nombres %>
+                        </td>
+                        <td>
+                            <%=datosUser[i].Correo %>
+                        </td>
+                        <td>
+                            <%=datosUser[i].Direccion %>
+                        </td>
+                        <td>
+                            <%=datosUser[i].Telefono %>
+                        </td>
+                        <td>
+                            <%=datosUser[i].Rol %>
+                        </td>
+                        <td class="admin">
+                            <a href="/eliminar/<%=datosUser[i].identificacion%>">Eliminar</a>
+                        </td>
+
+                    </tr>
+                    <% } %>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

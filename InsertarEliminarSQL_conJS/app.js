@@ -10,7 +10,8 @@ servidor.set("views", __dirname + "/views");
 
 servidor.use(require("./routes/rutaIndex"));
 servidor.use(require("./routes/rutaRegistro"));
+servidor.use(require("./routes/rutaProductos"));
 
-servidor.listen(3000, ()=>{
+servidor.listen(3000, () => {
     console.log('El servidor 3000 esta activo');
 });

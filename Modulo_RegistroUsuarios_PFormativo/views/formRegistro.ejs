@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formulario de Registro de Usuarios</title>
+</head>
+
+<body>
+    <nav>
+        <div id="nav">
+            <a href="/">Inicio</a>
+            <a href="/formRegistro">Registrar Usuarios</a>
+            <a href="/listarUsuarios">Listado de Usuarios</a>
+        </div>
+    </nav>
+
+    <div class="mainform">
+        <div class="cont">
+            <fieldset>
+                <form action="/registrarUsuario" method="post">
+                    <h2>Formulario de Registro</h2>
+
+
+                    <div class="boxform">
+                        <p>Datos Personales</p><br>
+                        <input class="nombreuser" type="text" placeholder="Ingrese su(s) nombres" name="nombre" value=""><br><br>
+                        <input class="iduser" type="text" placeholder="Ingrese su numero de identificacion" name="idusuario" value="">
+                        <input class="diruser" type="text" placeholder="Direccion de Residencia" name="direccion" value=""><br><br>
+                        <input class="numuser" type="tel" placeholder="Numero Telefónico" name="telefono" value="">
+                        <input class="mailuser" type="email" placeholder="Correo Electrónico" name="correo" value=""><br><br>
+
+                        <p>Datos de Sesión</p>
+                        <select class="selecusuario" name="tipousuario" id="tipousuario">
+                            <option value="" aria-disabled="true">Selecciona Tipo de Usuario...</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Instructor">Instructor</option>
+                            <option value="Aprendiz">Aprendiz</option>
+                            <option value="Visitante">Visitante</option>
+
+                        </select>
+                        <br><br>
+                        <input class="login" type="text" placeholder="Nombre de Usuario" name="usuario" value="">
+                        <input class="pass" type="text" placeholder="Contraseña" name="contrasena" value="">
+
+                    </div>
+                    <button class="button-submit" type="submit" value="Enviar">
+
+
+
+            </fieldset>
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

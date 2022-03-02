@@ -63,14 +63,13 @@
                     <label class="form-label" for="inputGroupSelect01">Unidad Productiva</label>
                     <select class="form-select" name="UProductiva" id="inputGroupSelect01">
                         <option selected disabled value="">Selecciona...</option>
-                        <option value="1">Agricola</option>
-                        <option value="2">Agroindustria</option>
-                        <option value="3">Gastronomía</option>
-                        <option value="4">Pecuaria</option>
-                        <option value="5">Escuela Nacional de la Calidad del Café</option>
-                        <option value="6">Ambiental y Recursos Naturales</option>
-                        <option value="7">Empresa de Servicios Publicos</option>
-                        <option value="8">Moda, comercio y servicios.</option>
+                        <% for(let i = 0; i< UProd.length; i++){%>
+                        }
+                        <option value="<%=UProd[i].pk_Codigo_UP %>">
+
+                            <%= UProd[i].Nombre_UP %></option>
+                            <%}%>
+
                     </select>
 
                 </div>

@@ -18,9 +18,22 @@
         <a href="/listarProductos">Ver Listado</a>
     </div>
     <div id="cont" class="container">
+        <div class="row">
+            <div class="col-2">
+                <nav>
+                    <ul>
+                        <li class="registrar-usuario hover-overlay">
+                            <a href="/frmRegistro"><span>Agregar Producto</span></a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <nav class="navbar navbar-dark bg-dark">
-            <a href="#" class="navbar-brand mx-auto">LISTADO DE PRODUCTOS CON 5 O MENOS UNIDADES EN STOCK</a>
+            <a href="#" class="navbar-brand mx-auto">LISTADO DE PRODUCTOS</a>
         </nav>
+
         <div class="row">
             <div class="col-md-12 mt-12 text-center">
                 <table class="table table-striped">
@@ -53,7 +66,7 @@
                                 <td>
                                     <%=prodstock[i].Nombre_UP %>
                                 </td>
-                                <td><a href="/eliminarProd">Eliminar</a></td>
+                                <td><a href="/eliminar/<%=prodstock[i].Pk_id_pdto%>">Eliminar</a></td>
 
                             </tr>
                             <% } %>

@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    width: 100%;
+    height: 40px;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px #0000008f;
+}
+
+#nav a {
+    color: rgb(143, 143, 143);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1em;
+    padding: 11px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: white;
+    background: rgb(53, 53, 53);
+}
+
+
+/* Formulario de Registro */
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.mainform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+    background-image: url('../img/sena.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 600px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px 10px 20px #0000008f;
+}
+
+.poster {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(236, 122, 56, 0.884);
+}
+
+.form1 {
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+fieldset {
+    background: rgb(255, 255, 255);
+    display: block;
+    width: 1000px;
+    height: 600px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+.boxform {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 5.5em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxform label {
+    width: 100px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.inputsele {
+    margin-right: 0.5em;
+}
+
+.nombreuser,
+.iduser,
+.diruser,
+.numuser,
+.mailuser,
+.login,
+.pass {
+    height: 50px;
+    padding: 3px 10px;
+    display: inline;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 0;
+}
+
+.nombreuser {
+    width: 770px;
+}
+
+.iduser {
+    width: 250px;
+    margin-right: 4em;
+}
+
+.diruser {
+    width: 470px;
+}
+
+.numuser {
+    width: 250px;
+    margin-right: 4em;
+}
+
+.mailuser {
+    width: 470px;
+}
+
+.login,
+.pass {
+    width: 250px;
+    margin-right: 4em;
+}
+
+.selecusuario {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    height: 50px;
+    padding: 3px 10px;
+    border: none;
+    border-bottom: 1px rgb(0, 0, 0) solid;
+    margin: 8px 0;
+    display: inline;
+}
+
+.selmedico option {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.button-submit {
+    color: whitesmoke;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(0, 132, 172);
+    width: 100px;
+    height: 3em;
+    padding: 8px 16px;
+    margin: 20px 0 0 88px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.button-submit:hover {
+    cursor: pointer;
+    background: rgb(0, 89, 130);
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    margin: 8px 0;
+    resize: none;
+    display: block;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(75, 75, 75);
+}
+
+@media only screen and (max-width:600px) {
+    fieldset {
+        width: 90%;
+        border-radius: 20px;
+    }
+    .boxform {
+        width: 80%;
+    }
+    .boxform input[type="text"],
+    .boxform input[type="select"] {
+        width: 200px;
+        height: 50px;
+        padding: 3px 10px;
+        margin: 8px 0;
+    }
+    .selecusuario {
+        width: 100%;
+    }
+    .button-submit {
+        height: 3em;
+    }
+}
+
+
+/* Tabla de usuarios */
+
+.mainlist {
+    display: flex;
+    justify-content: center;
+    height: 94vh;
+    background: rgba(0, 0, 0, 0.7) url('../img/sena.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.titulo {
+    width: 100%;
+    height: 50px;
+}
+
+.cont2 {
+    width: 80em;
+    height: 560px;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 2em;
+    background: rgba(255, 255, 255, 0.823);
+    box-shadow: 0px 10px 20px #0000008f;
+}
+
+.personas {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.personas thead th {
+    text-align: center;
+    width: 500px;
+}
+
+.personas td,
+.personas th {
+    border: 1px solid rgb(104, 104, 104);
+    padding: 8px;
+}
+
+.personas tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.personas tr:hover {
+    background: rgb(174, 174, 174);
+}
+
+.personas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background: #303030;
+    color: white;
+}
+
+.admin {
+    text-align: center;
+}

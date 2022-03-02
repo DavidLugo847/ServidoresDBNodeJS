@@ -1,13 +1,24 @@
-let controladorIndex = {};
+let controlador = {};
+let conexion = require('../conexionbd');
 
-controladorIndex.renderIndex = (req, resp)=>{
+controlador.renderIndex = (req, resp) => {
     resp.render('index.ejs');
 };
-controladorIndex.renderFrmRegistro = (req, resp)=>{
-    resp.render('formularioReg');
-};
-controladorIndex.regresar = (req, resp) => {
+
+controlador.regresar = (req, resp) => {
     resp.render("index.ejs");
 };
 
-module.exports = controladorIndex;
+controlador.renderFrmRegistro = (req, resp) => {
+    var sql = "select * from unidades_productivas";
+
+    conexion.query(sql, (err, rows, fields) => {
+        if (!err) {
+            resp.render('formularioReg.ejs', { UProd: rows });
+        } else {
+            console.log("Error en la consulta: " + err);
+        }
+    });
+};
+
+module.exports = controlador;
